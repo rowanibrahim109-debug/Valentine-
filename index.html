@@ -17,7 +17,7 @@
         .hidden { display: none; }
         .photo-card { margin-bottom: 20px; background: #fffafb; padding: 10px; border-radius: 15px; }
         .photo-card img { width: 100%; border-radius: 10px; }
-        .photo-card p { color: #d63384; font-size: 14px; margin-top: 10px; font-weight: 500; }
+        .photo-card p { color: #d63384; font-size: 15px; margin-top: 10px; font-weight: 500; font-style: italic; }
         .back-btn { background: #555; color: white; width: 60%; margin: 20px auto; font-size: 14px; }
         .kiss { position: fixed; font-size: 30px; animation: float 2s ease-out forwards; z-index: 100; pointer-events: none; }
         @keyframes float { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-100px); } }
@@ -35,7 +35,8 @@
 
     <div id="noPage" class="container hidden">
         <video id="sadVideo" playsinline loop>
-            <source src="https://streamable.com/e/y5dv4e" type="video/mp4">
+            <source src="Me.mp4" type="video/mp4">
+            <source src="me.mp4" type="video/mp4">
         </video>
         <h2 style="color: #ff4d94;">I knew you would annoy me! 🙄</h2>
         <button id="yesBtn" onclick="location.reload()">Try Again</button>
@@ -45,8 +46,8 @@
         <div id="mainOptions">
             <img class="main-img" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXN6ZTB6NHV3bmZpbmR6Z3Z4bmZxeGZxeGZxeGZxeGZxeGZxeGZ4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/l2QE8X9k7x0Y6yS9W/giphy.gif" alt="Hugging Cats">
             <h1>Best Decision Ever ❤️</h1>
-            <button class="opt-btn" onclick="showContent('photos')">Our Photos 📸</button>
-            <button class="opt-btn" onclick="showContent('msg')">Message ✉️</button>
+            <button class="opt-btn" onclick="showContent('photos')">Our Special Photos 📸</button>
+            <button class="opt-btn" onclick="showContent('msg')">A Note For You ✉️</button>
             <button class="opt-btn" onclick="showContent('voucher')">Voucher 🎟️</button>
         </div>
 
@@ -92,7 +93,7 @@
                         <p>The closest pictures to my heart 💖</p>
                     </div>`;
             } else if (type === 'msg') {
-                area.innerHTML = "<h3>To My Favorite Human</h3><p>كل عيد حب وإحنا مع بعض يا محمد.. ربنا يخليك ليا ❤️</p>";
+                area.innerHTML = "<h3>To My Favorite Human ❤️</h3><p>كل عيد حب وإحنا مع بعض يا محمد.. ربنا يخليك ليا وميحرمنيش منك أبداً!</p>";
             } else if (type === 'voucher') {
                 area.innerHTML = `
                     <div class="voucher-box">
@@ -109,3 +110,4 @@
     </script>
 </body>
 </html>
+  
