@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Will You Be My Valentine?</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6f0;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 40px;
+}
+
+#main img {
+    width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#noBtn {
+    background-color: #999;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Yes page styles */
+#yesPage {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffdde1;
+}
+
+.kiss {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.4;
+}
+
+/* Menu options */
+.menu {
+    position: relative;
+    top: 50px;
+}
+
+.menu button {
+    display: block;
+    margin: 15px auto;
+    background-color: #ff4d6d;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<!-- Main page -->
+<div id="main">
+<h1>Will you be my Valentine? 💖</h1>
+<img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.png" alt="Cute cat">
+<button id="yesBtn">Yes 💕</button>
+<button id="noBtn">No 😢</button>
+</div>
+
+<!-- Yes page -->
+<div id="yesPage" class="hidden">
+<h1 style="margin-top:30px;">Yaaay 💖</h1>
+<img src="https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.png" style="width:150px; margin-top:20px;" alt="Cats hugging">
+<div class="menu">
+<button onclick="alert('Type your message here 💌')">Message</button>
+<button onclick="alert('Add your photos here 📸')">Photos</button>
+<button onclick="alert('Add your voucher here 🎁')">Voucher</button>
+</div>
+</div>
+
+<!-- No page -->
+<div id="noPage" class="hidden">
+<h1>I know you tried to annoy me by choosing No…</h1>
+<h2>Try again, you might like it 😘</h2>
+<video width="400" controls>
+  <source src="your-video.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+
+<script>
+// Buttons
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const main = document.getElementById("main");
+const yesPage = document.getElementById("yesPage");
+const noPage = document.getElementById("noPage");
+
+// Yes click
+yesBtn.onclick = function() {
+    main.classList.add("hidden");
+    yesPage.classList.remove("hidden");
+
+    // Generate random kisses
+    for(let i=0; i<30; i++){
+        let kiss = document.createElement("div");
+        kiss.className = "kiss";
+        kiss.innerText = "💋";
+        kiss.style.top = Math.random()*window.innerHeight + "px";
+        kiss.style.left = Math.random()*window.innerWidth + "px";
+        yesPage.appendChild(kiss);
+    }
+};
+
+// No click
+noBtn.onclick = function() {
+    main.classList.add("hidden");
+    noPage.classList.remove("hidden");
+};
+</script>
+
+</body>
+    </html>
