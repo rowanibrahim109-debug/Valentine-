@@ -5,35 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Valentine 💖</title>
     <style>
-        body { 
-            background-color: #fff0f5; 
-            text-align: center; 
-            font-family: 'Segoe UI', Arial, sans-serif; 
-            margin: 0; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
+        body { background-color: #fff0f5; text-align: center; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
         .container { width: 90%; max-width: 450px; padding: 20px; background: white; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
         h1 { color: #ff4d94; font-size: 26px; }
         .main-img { width: 100%; border-radius: 20px; margin-bottom: 20px; }
         video { width: 100%; border-radius: 20px; background: #ffe6f0; }
-        button { 
-            width: 80%; padding: 15px; font-size: 18px; cursor: pointer; border: none; 
-            border-radius: 50px; margin: 10px 0; transition: 0.3s; font-weight: bold;
-        }
+        button { width: 80%; padding: 15px; font-size: 18px; cursor: pointer; border: none; border-radius: 50px; margin: 10px 0; transition: 0.3s; font-weight: bold; }
         #yesBtn { background-color: #ff4d94; color: white; box-shadow: 0 4px 15px rgba(255, 77, 148, 0.3); }
         #noBtn { background-color: #eee; color: #777; }
-        .opt-btn { background-color: #fff; color: #ff4d94; border: 2px solid #ff4d94; margin: 5px 0; }
+        .opt-btn { background-color: #fff; color: #ff4d94; border: 2px solid #ff4d94; margin: 8px 0; display: block; width: 100%; box-sizing: border-box; }
         .hidden { display: none; }
         .photo-card { margin-bottom: 25px; text-align: center; }
         .photo-card img { width: 100%; border-radius: 15px; border: 5px solid #fff0f5; }
         .photo-card p { color: #555; font-style: italic; margin-top: 8px; font-size: 15px; font-weight: 500; }
         .kiss { position: fixed; font-size: 30px; animation: float 2s ease-out forwards; z-index: 100; pointer-events: none; }
         @keyframes float { 0% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-100px); } }
-        .back-btn { background: #ff4d94; color: white; width: 40%; font-size: 14px; margin-top: 15px; }
+        .back-btn { background: #ff4d94; color: white; width: 50%; font-size: 14px; margin-top: 15px; }
+        #displayArea { padding: 10px; font-size: 18px; color: #444; }
     </style>
 </head>
 <body>
@@ -106,9 +94,10 @@
                         <img src="photo2.jpg" alt="Photo 2">
                         <p>The closest pictures to my heart 💖</p>
                     </div>
+                    <p style="font-size:12px; color: #999;">(ارفعي صورك بأسماء photo1.jpg و photo2.jpg عشان تظهر هنا)</p>
                 `;
             } else if (type === 'msg') {
-                area.innerHTML = "<h3>I Love You!</h3><p>كل عيد حب وإحنا مع بعض يا محمد.. ربنا يخليك ليا ❤️</p>";
+                area.innerHTML = "<h3>To My Favorite Human ❤️</h3><p>كل عيد حب وإحنا مع بعض يا محمد.. ربنا يخليك ليا وميحرمنيش منك أبداً!</p>";
             }
         }
 
@@ -119,4 +108,3 @@
     </script>
 </body>
 </html>
-
